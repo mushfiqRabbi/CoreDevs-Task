@@ -15,7 +15,7 @@ export const createPayment =
         email: req.body.email,
         totalPrice: req.body.totalPrice,
       });
-      res.send(createAgreement?.bkashURL);
+      res.status(200).send(createAgreement?.bkashURL);
     } catch (error) {
       res.status(500).send("something went wrong");
     }
